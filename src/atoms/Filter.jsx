@@ -1,15 +1,17 @@
 
-"use client";
-
-import { Dropdown } from "flowbite-react";
+import { Dropdown, DropdownItem } from "flowbite-react";
 
 export function ComponentFilter() {
   return (
-    <Dropdown label="Dropdown button" dismissOnClick={false} className="mt-52 ">
-      <Dropdown.Item>Product_1</Dropdown.Item>
-      <Dropdown.Item>Product_2</Dropdown.Item>
-      <Dropdown.Item>Product_3</Dropdown.Item>
-      <Dropdown.Item>Product_4</Dropdown.Item>
-    </Dropdown>
+    <div className="flex items-center gap-4 justify-center ">
+       <label htmlFor="" className="mr-5  text-white font-bold text-xl">Filter :</label>
+      <Dropdown label="Select" size="sm" className="bg-green-400">
+        <DropdownItem className=" font-bold">Tea</DropdownItem>
+        <DropdownItem className=" font-bold">Spices</DropdownItem>
+        <DropdownItem className=" font-bold">Product_3</DropdownItem>
+        <DropdownItem className=" font-bold">Product_4</DropdownItem>
+        <DropdownItem className=" font-bold">Product_5</DropdownItem>
+      </Dropdown>
+    </div>
   );
 }

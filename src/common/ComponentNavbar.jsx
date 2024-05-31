@@ -4,6 +4,7 @@
 import { Avatar, Dropdown, Navbar } from "flowbite-react"
 import Logo from '../assets/Images/logo.png'
 import { Button } from "flowbite-react";
+import CartElement from "../atoms/CartElement";
 
 export default function ComponentNavbar() {
   return (
@@ -40,12 +41,12 @@ export default function ComponentNavbar() {
           </Navbar.Link>
           <Navbar.Link href="#" className="text-lg font-semibold text-white ">About</Navbar.Link>
           <Navbar.Link href="#" className="text-lg font-semibold text-white">Services</Navbar.Link>
-          <Navbar.Link href="#" className="text-lg font-semibold text-white">Pricing</Navbar.Link>
           <Navbar.Link href="#" className="text-lg font-semibold text-white">Contact</Navbar.Link>
         </Navbar.Collapse>
 
-        <Button outline gradientDuoTone="greenToBlue" className="font-bold ml-60">Login</Button>
-        <Button outline gradientDuoTone="greenToBlue" className="font-bold">Register</Button>
+        <Button outline gradientDuoTone="greenToBlue" className="font-bold ml-60 mobile:ml-5">Login</Button>
+        <Button outline gradientDuoTone="greenToBlue" className="font-bold mobile:-ml-25">Register</Button>
+        <CartElement/>
       </Navbar>
     </div>
   );
