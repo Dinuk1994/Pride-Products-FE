@@ -8,9 +8,6 @@ export function ComponentFilter() {
       <Dropdown label="Select" size="sm" className="bg-green-400">
         <DropdownItem className=" font-bold">Tea</DropdownItem>
         <DropdownItem className=" font-bold">Spices</DropdownItem>
-        <DropdownItem className=" font-bold">Product_3</DropdownItem>
-        <DropdownItem className=" font-bold">Product_4</DropdownItem>
-        <DropdownItem className=" font-bold">Product_5</DropdownItem>
       </Dropdown>
     </div>
   );

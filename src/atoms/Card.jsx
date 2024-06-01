@@ -4,9 +4,9 @@ import Image2 from '../assets/Images/Image2.jpg'
 
 export default function ComponentCard() {
     return (
-        <div>
+        <div className="px-3 py-3">
             <Card
-                className="max-w-sm transform transition-transform duration-300 hover:scale-105"
+                className="max-w-xs transform transition-transform duration-300 hover:scale-105 "
                 imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
                 imgSrc={Image2}
             >
