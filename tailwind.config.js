@@ -14,7 +14,7 @@ export default {
     extend: {
       backgroundColor: {
         'new-gray': '#B9B7B7',
-          
+        'admin-background' : "#57A6A1",  
 
       },
       fontFamily: {
