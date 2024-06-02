@@ -36,7 +36,7 @@ export default function ComponentNavbar() {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="#" active className="text-lg font-semibold text-white">
+          <Navbar.Link href="/home" active className="text-lg font-semibold text-white">
             Home
           </Navbar.Link>
           <Navbar.Link href="#" className="text-lg font-semibold text-white ">About</Navbar.Link>
