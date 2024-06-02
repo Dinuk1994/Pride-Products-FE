@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaImage } from "react-icons/fa";
+import { TextInput,Textarea } from "flowbite-react";
 
 const AdminContainer = () => {
     const [image, setImage] = useState(null);
@@ -17,14 +18,14 @@ const AdminContainer = () => {
 
     return (
         <div className="flex justify-center mt-5">
-            <div className="grid grid-cols-1 bg-gray-400 w-[1000px] rounded-xl p-5">
+            <div className="grid grid-cols-1 bg-gray-400 w-[1000px] rounded-xl mb-5 p-5">
                 <div className="flex justify-center w-full">
                     <label htmlFor="" className="font-bold text-white text-3xl mt-2">Create Product</label>
                 </div>
-                <div className="grid grid-cols-2 mt-8 gap-4">
+                <div className="grid grid-cols-2 mobile:grid-cols-1 mt-8 gap-4 ">
                     <div className="flex flex-col items-center col-span-1">
                         <div
-                            className={`w-full h-64 max-w-xs rounded border-4 border-white flex items-center justify-center ${!image ? 'bg-white' : ''}`}
+                            className={`w-full h-64 max-w-xs mt-20 mobile:mt-5 rounded border-4 border-white flex items-center justify-center ${!image ? 'bg-white' : ''}`}
                         >
                             {image ? (
                                 <img src={image} alt="Uploaded" className="w-full h-full object-cover rounded" />
@@ -41,9 +42,16 @@ const AdminContainer = () => {
                         />
                     </div>
                     <div className="grid col-span-1">
-                        <label htmlFor="" className="flex justify-center w-full h-full">
-                            
-                        </label>
+                        <label htmlFor="" className="text-white w-full h-full">Product ID</label>
+                        <TextInput id="base" type="text" sizing="md" />
+                        <label htmlFor="" className="text-white w-full h-full">Title</label>
+                        <TextInput id="base"  type="text" sizing="md" />
+                        <label htmlFor="" className="text-white w-full h-full">Price</label>
+                        <TextInput id="base" type="number" sizing="md" />
+                        <label htmlFor="" className="text-white w-full h-full">Description</label>
+                        <Textarea id="comment" placeholder="Product description" required rows={4} />
+                        <label htmlFor="" className="text-white w-full h-full">Content</label>
+                        <Textarea id="comment" placeholder="Leave a comment..." required rows={4} />
                     </div>
                 </div>
             </div>

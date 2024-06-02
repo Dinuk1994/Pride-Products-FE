@@ -1,4 +1,5 @@
 import AdminNavbar from "../atoms/AdminNavbar"
+import ComponentFooter from "../common/ComponentFooter"
 import AdminContainer from "../molecules/AdminContainer"
 
 const Admin = () => {
@@ -6,6 +7,7 @@ const Admin = () => {
     <div className="bg-admin-background">
        <AdminNavbar/>
        <AdminContainer/>
+       <ComponentFooter/>
     </div>
   )
 }

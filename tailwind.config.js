@@ -14,7 +14,7 @@ export default {
     extend: {
       backgroundColor: {
         'new-gray': '#B9B7B7',
-        'admin-background' : "#57A6A1",  
+        'admin-background' : "#2C7865",  
         'adin-navbar':'#77B0AA',
       },
       fontFamily: {
