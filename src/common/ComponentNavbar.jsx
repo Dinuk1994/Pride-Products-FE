@@ -9,7 +9,7 @@ export default function ComponentNavbar() {
 
   return (
     <div>
-      <Navbar fluid rounded className="bg-#BACD92 -mt-3">
+      <Navbar fluid rounded className="bg-component-navbar -mt-3">
         <Navbar.Brand>
           <img src={Logo} className="mr-3 h-28" alt="Logo" />
 

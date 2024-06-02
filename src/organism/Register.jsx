@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Card, Label, TextInput } from "flowbite-react";
+import { Button, Card, Label, TextInput, Checkbox } from "flowbite-react";
 import Logo from '../assets/Images/logo.png';
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
@@ -40,6 +40,15 @@ const Register = () => {
                         <button type="button" onClick={togglePasswordVisibility} className="absolute bottom-[10px] right-[10px]">
                             {passwordVisible ? <IoIosEye className='text-gray-600' /> : <IoIosEyeOff className='text-gray-600' />}
                         </button>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <Checkbox id="accept" defaultChecked />
+                        <Label htmlFor="accept" className="flex">
+                            I agree with the&nbsp;
+                            <a href="#" className="text-cyan-600 hover:underline dark:text-cyan-500">
+                                terms and conditions
+                            </a>
+                        </Label>
                     </div>
                     <Button type="submit">Register</Button>
                     <div className="flex justify-center text-white">
