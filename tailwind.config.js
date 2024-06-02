@@ -15,7 +15,7 @@ export default {
       backgroundColor: {
         'new-gray': '#B9B7B7',
         'admin-background' : "#57A6A1",  
-
+        'adin-navbar':'#77B0AA',
       },
       fontFamily: {
         'heading': ['Pacifico', 'cursive'],
