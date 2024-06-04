@@ -7,8 +7,8 @@ import { FcGoogle } from "react-icons/fc";
 export function ComponentLogin() {
     return (
         <div>
-            <div className="flex justify-center items-center h-screen">
-                <Card className="bg-gray-400 w-96  rounded-2xl shadow-2xl shadow-black">
+            <div className="flex justify-center items-center h-screen p-4">
+                <Card className="bg-gray-400 p-5 mobile:p-0  rounded-2xl shadow-2xl shadow-black">
                     <form className="flex flex-col gap-4">
                         <div className='flex flex-col items-center'>
                             <label htmlFor="" className='font-bold text-2xl text-blue-900 mt-1 font-serif text-nowrap'>Welcome to Pride Products</label>

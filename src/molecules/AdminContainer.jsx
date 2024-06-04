@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaImage } from "react-icons/fa";
-import { TextInput,Textarea } from "flowbite-react";
+import { TextInput, Textarea, Button } from "flowbite-react";
 
 const AdminContainer = () => {
     const [image, setImage] = useState(null);
@@ -17,8 +17,8 @@ const AdminContainer = () => {
     };
 
     return (
-        <div className="flex justify-center mt-5">
-            <div className="grid grid-cols-1 bg-gray-400 w-[1000px] rounded-xl mb-5 p-5">
+        <div className="flex justify-center mt-10">
+            <div className="grid grid-cols-1 bg-cyan-800 w-[1000px] shadow-xl shadow-black rounded-xl mb-20 p-5">
                 <div className="flex justify-center w-full">
                     <label htmlFor="" className="font-bold text-white text-3xl mt-2">Create Product</label>
                 </div>
@@ -45,14 +45,18 @@ const AdminContainer = () => {
                         <label htmlFor="" className="text-white w-full h-full">Product ID</label>
                         <TextInput id="base" type="text" sizing="md" />
                         <label htmlFor="" className="text-white w-full h-full">Title</label>
-                        <TextInput id="base"  type="text" sizing="md" />
+                        <TextInput id="base" type="text" sizing="md" />
                         <label htmlFor="" className="text-white w-full h-full">Price</label>
                         <TextInput id="base" type="number" sizing="md" />
                         <label htmlFor="" className="text-white w-full h-full">Description</label>
                         <Textarea id="comment" placeholder="Product description" required rows={4} />
                         <label htmlFor="" className="text-white w-full h-full">Content</label>
                         <Textarea id="comment" placeholder="Leave a comment..." required rows={4} />
+                        <div className='flex justify-center'>
+                            <Button className='bg-blue-500 hover:bg-blue-800 mt-3 shadow-md shadow-black w-48 font-bold'>Add Product</Button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
