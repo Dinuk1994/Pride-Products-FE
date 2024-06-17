@@ -27,7 +27,7 @@ const CardCollection = () => {
         dots: false,
         infinite: false,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 1,
         slidesToScroll: 1,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
@@ -37,7 +37,7 @@ const CardCollection = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: false
@@ -63,22 +63,18 @@ const CardCollection = () => {
         ]
     };
 
-    return (
-        <div className='ml-3 mr-3 mt-2 mb-2'>
-            <div className=""> 
-                <Slider className=' ml-3' {...settings}> 
-                    <ComponentCard />
-                    <ComponentCard />
-                    <ComponentCard />
-                    <ComponentCard />
-                    <ComponentCard />
-                    <ComponentCard />
-                    <ComponentCard />
-                    <ComponentCard />
-                </Slider>
+
+        return (
+            <div className='ml-3 mr-3 mt-2 mb-2'>
+                <div className="ml-3"> 
+                    <Slider className='ml-3' {...settings}> 
+                        <ComponentCard />
+                    </Slider>
+                </div>
             </div>
-        </div>
-    );
+        );
+        
+    
 };
 
 export default CardCollection;
