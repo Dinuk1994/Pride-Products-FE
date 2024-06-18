@@ -32,7 +32,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path='/admin' element={<Admin />} />
-          <Route path='/view' element={<View />} />
+          <Route path='/view/:id' element={<View />} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
       </Router>
