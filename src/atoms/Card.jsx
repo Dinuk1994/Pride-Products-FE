@@ -7,7 +7,6 @@ import { useContext, useState } from "react";
 import { GlobalState } from '../App'
 import { Link } from "react-router-dom";
 
-
 export default function ComponentCard() {
     const state = useContext(GlobalState)
     const [products] = state.productAPI.products
@@ -20,6 +19,8 @@ export default function ComponentCard() {
         const newItem = <CartCard />;
         setCart(oldCart => [...oldCart, newItem]);
     };
+
+   
 
     return (
         <div className="flex ">

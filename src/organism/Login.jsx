@@ -3,12 +3,35 @@
 import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import Logo from '../assets/Images/logo.png'
 import { FcGoogle } from "react-icons/fc";
+import { useState } from "react";
+import axios from "axios";
 
 export function ComponentLogin() {
+    const[user,setUser] =useState({
+        'email': '',
+        'password' : '' 
+    })
+
+    const loginFunction=(event)=>{
+        const{name,value}=event.target;
+        setUser({...user,[name]:value})
+    }
+
+    const loginSubmit= async (event)=>{
+        event.preventDefault()
+        try {
+            await axios.post('/user/login',{...user})
+            localStorage.setItem('firstLogin',true)
+            window.location.href="/"
+        } catch (error) {
+            alert(error.response.data.msg)
+        }
+    }
+    
     return (
         <div>
             <div className="flex justify-center items-center h-screen p-4">
-                <Card className="bg-gray-400 p-5 mobile:p-0  rounded-2xl shadow-2xl shadow-black">
+                <Card onSubmit={loginSubmit} className="bg-gray-400 p-5 mobile:p-0  rounded-2xl shadow-2xl shadow-black">
                     <form className="flex flex-col gap-4">
                         <div className='flex flex-col items-center'>
                             <label htmlFor="" className='font-bold text-2xl text-blue-900 mt-1 font-serif text-nowrap'>Welcome to Pride Products</label>
@@ -19,13 +42,13 @@ export function ComponentLogin() {
                             <div className="mb-2 block">
                                 <Label htmlFor="email1" className='text-white font-bold' value="Your email" />
                             </div>
-                            <TextInput id="email1" type="email" placeholder="dinuk@gmail.com" required />
+                            <TextInput id="email1" type="email" value={user.email} onChange={loginFunction} placeholder="dinuk@gmail.com" required />
                         </div>
                         <div>
                             <div className="mb-2 block">
                                 <Label htmlFor="password1" className='text-white font-bold' value="Your password" />
                             </div>
-                            <TextInput id="password1" type="password" required />
+                            <TextInput id="password1" value={user.password} onChange={loginFunction} type="password" required />
                         </div>
                         <div className="flex items-center gap-2">
                             <Checkbox id="remember" />
