@@ -11,8 +11,6 @@ export default function ComponentCard() {
     const state = useContext(GlobalState)
     const [products] = state.productAPI.products
 
-    console.log(products);
-
     const [cart, setCart] = useState([]);
 
     const addToCart = () => {

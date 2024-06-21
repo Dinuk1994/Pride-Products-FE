@@ -20,9 +20,10 @@ export function ComponentLogin() {
     const loginSubmit= async (event)=>{
         event.preventDefault()
         try {
-            await axios.post('/user/login',{...user})
+            await axios.post('http://localhost:5000/user/login',{...user})
             localStorage.setItem('firstLogin',true)
             window.location.href="/"
+            console.log(user);
         } catch (error) {
             alert(error.response.data.msg)
         }
@@ -31,8 +32,8 @@ export function ComponentLogin() {
     return (
         <div>
             <div className="flex justify-center items-center h-screen p-4">
-                <Card onSubmit={loginSubmit} className="bg-gray-400 p-5 mobile:p-0  rounded-2xl shadow-2xl shadow-black">
-                    <form className="flex flex-col gap-4">
+                <Card className="bg-gray-400 p-5 mobile:p-0  rounded-2xl shadow-2xl shadow-black">
+                    <form onSubmit={loginSubmit}  className="flex flex-col gap-4">
                         <div className='flex flex-col items-center'>
                             <label htmlFor="" className='font-bold text-2xl text-blue-900 mt-1 font-serif text-nowrap'>Welcome to Pride Products</label>
                             <img src={Logo} alt="Logo" className='w-32 h-32' />
@@ -42,13 +43,13 @@ export function ComponentLogin() {
                             <div className="mb-2 block">
                                 <Label htmlFor="email1" className='text-white font-bold' value="Your email" />
                             </div>
-                            <TextInput id="email1" type="email" value={user.email} onChange={loginFunction} placeholder="dinuk@gmail.com" required />
+                            <TextInput  type="email" name="email" value={user.email} onChange={loginFunction} placeholder="dinuk@gmail.com" required />
                         </div>
                         <div>
                             <div className="mb-2 block">
-                                <Label htmlFor="password1" className='text-white font-bold' value="Your password" />
+                                <Label htmlFor="password1"  className='text-white font-bold' value="Your password" />
                             </div>
-                            <TextInput id="password1" value={user.password} onChange={loginFunction} type="password" required />
+                            <TextInput  value={user.password} name="password" onChange={loginFunction} type="password" required />
                         </div>
                         <div className="flex items-center gap-2">
                             <Checkbox id="remember" />
